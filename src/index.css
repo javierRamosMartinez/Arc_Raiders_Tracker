@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* Estilo global para que el fondo siempre sea oscuro y profesional */
+body {
+  @apply bg-slate-900 m-0 p-0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}

@@ -2,7 +2,7 @@
 
 Una herramienta avanzada de planificación y rastreo de materiales para el universo de Arc Raiders. Esta aplicación permite a los jugadores gestionar sus objetivos de fabricación y optimizar sus rutas de recolección de loot mediante ingeniería inversa de datos.
 
-![Live Demo](https://img.shields.io/badge/Demo-En%20Vivo-blue?style=for-the-badge) 
+![Live Demo](https://arc-raiders-portfolio.vercel.app/) 
 
 
 ## 🚀 Características Principales
@@ -31,7 +31,7 @@ Para optimizar esto, utilicé `useMemo` para asegurar que los cálculos de filtr
 
 1. Clona el repositorio:
 
-   git clone [https://github.com/tu-usuario/arc-raiders-tracker.git](https://github.com/tu-usuario/arc-raiders-tracker.git)
+   git clone (https://github.com/javierRamosMartinez/Arc_Raiders_Tracker.git)
 
 2. Instala las dependencias
 

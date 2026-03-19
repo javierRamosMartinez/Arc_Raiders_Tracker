@@ -1,42 +1,105 @@
 # 🛰️ Arc Raiders Loot & Crafting Tracker
 
-Una herramienta avanzada de planificación y rastreo de materiales para el universo de Arc Raiders. Esta aplicación permite a los jugadores gestionar sus objetivos de fabricación y optimizar sus rutas de recolección de loot mediante ingeniería inversa de datos.
+Herramienta de planificación y rastreo de materiales para **Arc Raiders** que ayuda a los jugadores a optimizar el crafting y planificar qué objetos recolectar en el mundo del juego.
 
-![Live Demo](https://arc-raiders-portfolio.vercel.app/) 
+La aplicación analiza datos de la comunidad y calcula automáticamente las mejores fuentes de materiales mediante ingeniería inversa.
 
+## 🔗 Live Demo
 
-## 🚀 Características Principales
+👉 https://arc-raiders-portfolio.vercel.app/
 
-- **Calculadora de Crafting:** Desglose automático de materiales necesarios para cualquier ítem o mejora.
-- **Planificador de Loot Inteligente:** Algoritmo dinámico que identifica qué objetos del mundo (como relojes, proyectores o módulos) deben recolectarse para obtener materiales específicos mediante reciclaje.
-- **Sistema de Favoritos:** Persistencia de objetivos de fabricación (Context API) para un acceso rápido.
-- **Interfaz "Cyberpunk":** UI moderna, oscura y responsive construida con Tailwind CSS, enfocada en la legibilidad y la inmersión en el juego.
-- **Sincronización en Tiempo Real:** Consumo de datos actualizados directamente desde repositorios de la comunidad.
+---
+
+## 🚀 Características
+
+- **Calculadora de Crafting**
+  Desglose automático de todos los materiales necesarios para fabricar un objeto.
+
+- **Loot Planner Inteligente**
+  Identifica qué objetos del mundo conviene recoger para obtener los materiales deseados mediante reciclaje.
+
+- **Reverse Material Search**
+  Búsqueda inversa desde material → objeto que lo produce.
+
+- **Sistema de Favoritos**
+  Guarda objetivos de crafting usando persistencia con Context API.
+
+- **UI Estilo Cyberpunk**
+  Interfaz moderna y responsive diseñada con Tailwind CSS.
+
+- **Datos Dinámicos**
+  La aplicación consume JSON actualizados desde repositorios de la comunidad.
+
+---
+
+## 🧠 Problema que resuelve
+
+En Arc Raiders, los materiales no siempre se obtienen directamente.  
+Muchos provienen de **reciclar objetos del mundo**.
+
+Esto hace difícil responder preguntas como:
+
+- ¿Qué objetos debo recoger para fabricar este ítem?
+- ¿Cuál es la forma más eficiente de conseguir un material específico?
+
+Esta aplicación resuelve ese problema mediante un sistema de **ingeniería inversa del loot**.
+
+---
+
+## ⚙️ Cómo funciona
+
+El sistema analiza estructuras de datos como:
+
+Cuando el usuario selecciona un material, la app:
+
+1. Recorre toda la base de datos de objetos
+2. Filtra los que contienen ese material
+3. Calcula las mejores fuentes
+4. Ordena los resultados por eficiencia
+
+Para optimizar el rendimiento:
+
+- Se usa **useMemo** para evitar recalcular resultados innecesarios
+- Los cálculos solo se ejecutan cuando cambian:
+  - favoritos
+  - dataset
+  - filtros activos
+
+Esto permite mantener una experiencia fluida incluso con grandes volúmenes de datos.
+
+---
 
 ## 🛠️ Stack Tecnológico
 
-* **Frontend:** React.js (Hooks, Functional Components)
-* **Estilos:** Tailwind CSS (Arquitectura basada en utilidades)
-* **Gestión de Estado:** React Context API
-* **Enrutado:** React Router DOM
-* **Datos:** Fetch API para consumo de JSON dinámicos
+**Frontend**
 
-## 🧠 Desafíos Técnicos Resueltos
+- React
+- React Hooks
+- Functional Components
 
-Uno de los mayores retos fue implementar la **búsqueda inversa de materiales**. A diferencia de una base de datos tradicional, aquí el usuario marca un "Procesador" y la app debe recorrer cientos de objetos buscando en sus propiedades de reciclaje (`recyclesInto`) para mostrar las fuentes más eficientes. 
+**State Management**
 
-Para optimizar esto, utilicé `useMemo` para asegurar que los cálculos de filtrado y ordenamiento solo se ejecuten cuando cambian los favoritos o la base de datos, garantizando un rendimiento fluido (60fps) incluso con grandes volúmenes de datos.
+- React Context API
 
-## 📦 Instalación y Uso
+**Routing**
 
-1. Clona el repositorio:
+- React Router DOM
 
-   git clone (https://github.com/javierRamosMartinez/Arc_Raiders_Tracker.git)
+**Estilos**
 
-2. Instala las dependencias
+- Tailwind CSS
 
-   npm install
+**Datos**
 
-3. Lanza la aplicacion en modo desarrollo
+- Fetch API
+- JSON dinámicos de la comunidad
 
-   npm run dev
+---
+
+## 📦 Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/javierRamosMartinez/Arc_Raiders_Tracker.git
+```

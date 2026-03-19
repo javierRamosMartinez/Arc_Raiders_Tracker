@@ -54,7 +54,7 @@ export function Footer() {
 
                     {/* Links de Utilidad */}
                     <div className="flex gap-4 border-l border-slate-800 pl-6 md:flex">
-                        <a href="#" className="text-[9px] font-bold text-slate-500 hover:text-white transition-colors uppercase tracking-widest">Github</a>
+                        <a href="https://github.com/javierRamosMartinez" className="text-[9px] font-bold text-slate-500 hover:text-white transition-colors uppercase tracking-widest">Github</a>
                     </div>
                 </div>
             </div>
